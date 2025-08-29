@@ -1,0 +1,88 @@
+/* CSS para estilizar o jogo */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* Alinha os itens no topo */
+  margin-top: 20px;
+  background-color: #f0f0f0;
+  gap: 40px;
+  /* Espaço entre a grade e a lista de palavras */
+}
+
+.game-container {
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+#grid-container {
+  display: grid;
+  border: 2px solid #333;
+  /* O tamanho da grade será definido via JavaScript */
+}
+
+.cell {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  user-select: none;
+  /* Impede a seleção de texto padrão */
+  transition: background-color 0.2s;
+}
+
+/* Estilo para a célula enquanto o mouse está selecionando */
+.cell.selecting {
+  background-color: #aadeff;
+  /* Azul claro */
+}
+
+/* Estilo para a célula de uma palavra encontrada */
+.cell.found {
+  background-color: #90ee90;
+  /* Verde claro */
+  color: #000;
+}
+
+#words-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#word-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 18px;
+}
+
+#word-list li {
+  margin-bottom: 10px;
+  color: #555;
+  transition: color 0.3s;
+}
+
+/* Estilo para a palavra na lista quando encontrada */
+#word-list li.found {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #d9534f;
+  height: 30px;
+}
